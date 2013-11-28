@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativeLayout1"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/wallpaper" >
+
+    <TableLayout
+        android:id="@+id/childLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/game_border"
+        android:onClick="onClick" >
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/btnRestart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/childLayout"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="40dp"
+        android:onClick="onClick"
+        android:src="@drawable/restart" />
+
+    <ImageView
+        android:id="@+id/btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:onClick="onClick"
+        android:paddingTop="20dp"
+        android:src="@drawable/menu" />
+
+    <ImageView
+        android:id="@+id/btnPause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/childLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="5dp" />
+
+    <ImageView
+        android:id="@+id/imgBestScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnRestart"
+        android:layout_alignRight="@+id/childLayout"
+        android:src="@drawable/stars_0" />
+
+    <ImageView
+        android:id="@+id/imgScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnRestart"
+        android:layout_alignLeft="@+id/childLayout"
+        android:src="@drawable/game_score" />
+
+    <TextView
+        android:id="@+id/txtMove"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imgScore"
+        android:layout_toRightOf="@+id/imgScore"
+        android:text="150"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/txtBestScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgBestScore"
+        android:layout_toLeftOf="@+id/imgBestScore"
+        android:text="0"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</RelativeLayout>
